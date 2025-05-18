@@ -32,8 +32,14 @@ RUN curl -fsSL https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/ter
 # Install boto3 for AWS SDK in Python
 RUN pip3 install boto3
 
+# Create vscode user if it doesn't exist
+RUN id vscode || useradd -ms /bin/bash vscode
+
 # Set working directory
 WORKDIR /workspace
+
+# Set user
+USER vscode
 
 # Default shell
 SHELL ["/bin/bash", "-c"]

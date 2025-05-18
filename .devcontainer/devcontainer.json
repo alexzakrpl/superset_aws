@@ -11,9 +11,9 @@
       "terminal.integrated.defaultProfile.linux": "bash"
   },
   "postCreateCommand": "terraform -version && aws --version",
-  "remoteUser": "root",
+  "remoteUser": "vscode",
   "mounts": [
-      "source=${localWorkspaceFolder}/.aws,target=/root/.aws,type=bind",
+      "source=${localWorkspaceFolder}/.aws,target=/vscode/.aws,type=bind",
       "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
   ],
   "extensions": [
