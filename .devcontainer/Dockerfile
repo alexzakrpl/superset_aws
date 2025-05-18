@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     lsb-release \
     git \
+    awscli \
     vim \
     bash \
     openssh-client \
