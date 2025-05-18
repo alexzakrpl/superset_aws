@@ -20,3 +20,16 @@ variable "superset_env" {
   description = "Map of environment variables for Superset .env file"
   type        = map(string)
 }
+
+variable "hosted_zone_id" {
+  description = "Route 53 Hosted Zone ID"
+  type        = string
+  default = "Z04527133T6OE16LJ1T4X"
+}
+
+variable "domain_name" {
+  description = "Domain name for Superset"
+  type        = string
+  default     = "superset.zakrzewski.me"
+  }
+

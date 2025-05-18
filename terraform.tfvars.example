@@ -1,5 +1,7 @@
 # Superset environment variables
 superset_env = {
+  SUPERSET_ADMIN_FIRSTNAME = "Admin"
+  SUPERSET_ADMIN_LASTNAME = "User"
   SUPERSET_ADMIN_USERNAME = "admin"
   SUPERSET_ADMIN_PASSWORD = "securepassword"
   SUPERSET_ADMIN_EMAIL    = "admin@example.com"
