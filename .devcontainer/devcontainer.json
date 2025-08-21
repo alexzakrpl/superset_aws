@@ -1,0 +1,37 @@
+{
+  "name": "Terraform IaC Dev Container",
+  "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".",
+      "args": {
+          "TERRAFORM_VERSION": "1.7.5"
+      }
+  },
+  "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "postCreateCommand": "terraform -version && aws --version",
+  "remoteUser": "vscode",
+  "remoteEnv": {
+      "TF_VAR_region": "us-east-1"
+  },
+  "mounts": [
+      "source=${localWorkspaceFolder}/.aws,target=/home/vscode/.aws,type=bind",
+      "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "extensions": [
+      "hashicorp.terraform",
+      "amazonwebservices.aws-toolkit-vscode"
+  ],
+  "forwardPorts": [],
+  "customizations": {
+      "vscode": {
+          "settings": {},
+          "extensions": [
+              "hashicorp.terraform",
+              "amazonwebservices.aws-toolkit-vscode"
+          ]
+      }
+  }
+}
+
